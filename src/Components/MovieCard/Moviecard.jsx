@@ -5,7 +5,7 @@ import { BsPlusCircle } from "react-icons/bs";
 import { GoCheckCircleFill } from "react-icons/go";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
 
-function Moviecard() {
+function MovieCard() {
   let genres = ["Adventure", "Action", "Thriller"];
   return (
     <div className={styles.cardWrapper}>
@@ -61,12 +61,12 @@ function Moviecard() {
         <div className={styles.genres}>
           {genres?.map((g, index) => {
             return (
-              <spam key={index}>
+              <span key={index}>
                 {g}
                 {index < genres.length - 1 && (
-                  <spam className={styles.dot}>•</spam>
+                  <span className={styles.dot}>•</span>
                 )}
-              </spam>
+              </span>
             );
           })}
         </div>
@@ -75,4 +75,4 @@ function Moviecard() {
   );
 }
 
-export default Moviecard;
+export default MovieCard;
