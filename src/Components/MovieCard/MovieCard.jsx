@@ -5,14 +5,14 @@ import { BsPlusCircle } from "react-icons/bs";
 import { GoCheckCircleFill } from "react-icons/go";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
 
-function MovieCard() {
+function MovieCard({ movie }) {
   let genres = ["Adventure", "Action", "Thriller"];
   return (
     <div className={styles.cardWrapper}>
       {/* poster image */}
       <img
         className={styles.poster}
-        // src={movie.poster_path}
+        src={movie?.poster_path}
         alt="poster image"
       />
 
@@ -22,7 +22,7 @@ function MovieCard() {
         {/* img */}
         <img
           className={styles.hoverImage}
-          // src={movie.poster_path}
+          src={movie?.poster_path}
           alt="hover image"
         />
 
